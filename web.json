@@ -8,9 +8,5 @@
     "instance_type": "t2.micro",
     "ssh_username": "centos",
     "ami_name": "initial-ami- {{timestamp}}"
-  }],
-    "provisioners": [{
-        "type": "ansible",
-        "playbook_file": "web.yml"
-    }]
+  }]
 }	
