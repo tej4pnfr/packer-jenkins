@@ -17,19 +17,3 @@
             archiveArtifacts 'manifest.json'
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
