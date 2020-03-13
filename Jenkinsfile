@@ -8,7 +8,8 @@
             sh "ansible-playbook jenkins.yml --syntax-check"
         }
         stage('Build') {
-            withCredentials([usernamePassword(credentialsId: 'aws_access_keys', usernameVariable: 'AWS_ACCESS_KEY', passwordVariable: 'AWS_SECRET_KEY')]) {
+	     withAWS(credentials:'IDofSystemCredentials') {
+            //withCredentials([usernamePassword(credentialsId: 'aws_access_keys', usernameVariable: 'AWS_ACCESS_KEY', passwordVariable: 'AWS_SECRET_KEY')]) {
             // Run the packer build
                 sh "packer build jenkins.json"
             }
