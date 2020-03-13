@@ -5,6 +5,6 @@
         }
           stage('Validate') {
             sh "echo hello"
-            sh "ansible-playbook web.yml --syntax-check"
+            sh "ansible-playbook --syntax-check web.yml"
         }
     }
