@@ -4,9 +4,7 @@
             checkout scm
         }
           stage('Validate') {
-            sh '''
-              "echo hello"
-            "packer build web.json"
-            '''
+            sh "echo hello"
+            sh "packer build web.json"
         }
     }
