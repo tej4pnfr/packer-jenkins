@@ -4,7 +4,9 @@
             checkout scm
         }
           stage('Validate') {
-            sh "echo hello"
-            sh "ansible-playbook --syntax-check web.yml"
+            sh '''
+              "echo hello"
+            "packer build web.json"
+            '''
         }
     }
