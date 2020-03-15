@@ -1,4 +1,5 @@
     node {
+        agent any
           tools {
         packer 'packer-jenkins' 
     }
