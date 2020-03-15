@@ -4,10 +4,10 @@ node {
        //     checkout scm
        // }
 environment {
-  PACKER_PATH = tool name: 'packer-jenkins'
+  PACKER = "tool name: 'packer-jenkins'"
 }
 stage ('foo') {
-  sh("${PACKER_PATH}/packer --version")
+  sh("${PACKER}/packer --version")
 }
         //stage ('A'){
          //sh "/var/jenkins_home/tools/biz.neustar.jenkins.plugins.packer.PackerInstallation/packer-jenkins/packer build /var/jenkins_home/workspace/packer-pipeline/web.json"
