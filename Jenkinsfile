@@ -1,7 +1,7 @@
     node {
         agent any
           tools {
-        packer 'packer-jenkins' 
+        packer 'packer-jenkins-1.5.4' 
     }
         stage('Checkout') {
             // Get some code from a GitHub repository
