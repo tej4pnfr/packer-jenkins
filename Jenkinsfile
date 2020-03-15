@@ -5,6 +5,6 @@
         }
           stage('Validate') {
             sh "echo hello"
-            sh "packer build web.json"
+            sh "packer-jenkins build web.json"
         }
     }
