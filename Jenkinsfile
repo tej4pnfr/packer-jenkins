@@ -3,7 +3,7 @@
             // Get some code from a GitHub repository
             checkout scm
         }
-        stage 'A'){
+        stage ('A'){
     tool name: 'packer-jenkins', type: 'biz.neustar.jenkins.plugins.packer.PackerInstallation' 
     sh ('packer-jenkins centos.json')
        }
