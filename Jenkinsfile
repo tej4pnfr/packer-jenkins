@@ -4,7 +4,7 @@ node {
        //     checkout scm
        // }
     environment {
-        PATH+packer = tool name: 'packer-jenkins'
+        'PATH+packer' = tool name: 'packer-jenkins'
     }
 stage ('foo') {
   sh('packer --version')
