@@ -9,6 +9,6 @@
        }
   
           stage('Validate') {
-            sh "echo hello     
+            sh "echo hello"   
                 }
     }
