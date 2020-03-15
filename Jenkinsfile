@@ -1,12 +1,14 @@
-    node {
-        agent any
-          tools {
-        packer 'packer-jenkins-1.5.4' 
-    }
+node {
         stage('Checkout') {
             // Get some code from a GitHub repository
             checkout scm
         }
+    environment {
+        PATH+packer = tool name: 'packer-jenkins'
+    }
+stage ('foo') {
+  sh('packer --version')
+}
         stage ('A'){
          //sh "/var/jenkins_home/tools/biz.neustar.jenkins.plugins.packer.PackerInstallation/packer-jenkins/packer build /var/jenkins_home/workspace/packer-pipeline/web.json"
     //tool name: 'packer-jenkins', type: 'biz.neustar.jenkins.plugins.packer.PackerInstallation' 
